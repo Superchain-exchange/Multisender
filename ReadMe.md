@@ -1,6 +1,6 @@
 Send Tokens to multiple accounts with your personal computer
 
-##V1 and V2
+## V1 and V2
 
 V1 is a basic tool which does transactions one address at a time ,  so initalize a transaction <-> wait for confirmation <-> initalize the next transaction . If a transaction is failed , then the script is stopped by default and would need a human interference to start again.
 
