@@ -6,8 +6,8 @@ V1 is a basic tool which does transactions one address at a time ,  so initalize
 
 V2 is a advanced tool made on top of V1 with functions like multithreading , so that all the transactions are initalized nearly at the same time but are not needed to wait for confirmation of the previous initialized transaction to be confirmed. This gives a summary at the end with failed and success logs for each transaction . The disadvantage of this method is , if you have set a low gas price then all the transactions will fail and you will end up loosing the gas amount. 
 
-V1 transactions per minute is around 12 
-V2 transactions per minute is around 290
+V1 transactions per minute is around 12.
+V2 transactions per minute is around 290.
 
 ## Adjusting Gas Fees
 
