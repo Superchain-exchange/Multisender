@@ -4,7 +4,7 @@ Send Tokens to multiple accounts with your personal computer
 
 V1 is a basic tool which does transactions one address at a time ,  so initalize a transaction <-> wait for confirmation <-> initalize the next transaction . If a transaction is failed , then the script is stopped by default and would need a human interference to start again.
 
-V2 is a advanced tool made on top of V1 with functions like multithreading , so that all the transactions are initalized nearly at the same time but are not needed to wait for confirmation of the previous initialized transaction. This gives a summary at the end with failed and success logs for each transaction . The con of this method is , if you have set a low gas price then all the transactions will fail and you end up loosing the gas amount. 
+V2 is a advanced tool made on top of V1 with functions like multithreading , so that all the transactions are initalized nearly at the same time but are not needed to wait for confirmation of the previous initialized transaction to be confirmed. This gives a summary at the end with failed and success logs for each transaction . The disadvantage of this method is , if you have set a low gas price then all the transactions will fail and you will end up loosing the gas amount. 
 
 ## Adjusting Gas Fees
 
