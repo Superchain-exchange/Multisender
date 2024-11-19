@@ -12,7 +12,7 @@ V2 is a advanced tool made on top of V1 with functions like multithreading , so 
 
 ## Adjusting Gas Fees
 
-To change the gas fees for transactions, please modify the following parameters in the [code](https://github.com/Superchain-exchange/Multisender/blob/main/v1.py) on the line 55-58 , you would need to change the 0.51 and 40000 according to your needs and network conditions:
+To change the gas fees for transactions in V1, please modify the following parameters in the [code](https://github.com/Superchain-exchange/Multisender/blob/main/v1.py) on the line 55-58 , you would need to change the 0.51 and 40000 according to your needs and network conditions:
 
 ```python
 # Estimate the gas for the transaction
