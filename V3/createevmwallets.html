@@ -1,0 +1,57 @@
+import openpyxl
+from web3 import Web3
+
+# Function to create Ethereum wallets
+def create_ethereum_wallets(num_wallets):
+    wallets = []
+    for _ in range(num_wallets):
+        # Create a new wallet
+        account = Web3().eth.account.create()
+        wallet_address = account.address
+        private_key = account.key.hex()
+        wallets.append((wallet_address, private_key))
+    return wallets
+
+# Function to save wallet details to an Excel file
+def save_to_excel(wallets, filename="ethereum_wallets.xlsx"):
+    # Create a new workbook and select the active worksheet
+    workbook = openpyxl.Workbook()
+    sheet = workbook.active
+    sheet.title = "Ethereum Wallets"
+
+    # Add headers
+    sheet["A1"] = "Wallet Address"
+    sheet["B1"] = "Private Key"
+
+    # Add wallet data
+    for index, (address, private_key) in enumerate(wallets, start=2):
+        sheet[f"A{index}"] = address
+        sheet[f"B{index}"] = private_key
+
+    # Save the workbook
+    workbook.save(filename)
+    print(f"Wallet details saved to {filename}")
+
+# Main function
+def main():
+    try:
+        # Ask the user how many wallets to create
+        num_wallets = int(input("How many Ethereum wallets do you want to create? "))
+
+        if num_wallets <= 0:
+            print("Please enter a number greater than 0.")
+            return
+
+        # Create wallets
+        wallets = create_ethereum_wallets(num_wallets)
+
+        # Save wallets to Excel
+        save_to_excel(wallets)
+
+        print(f"Successfully created {num_wallets} Ethereum wallets.")
+    except ValueError:
+        print("Invalid input. Please enter a valid number.")
+
+# Run the script
+if __name__ == "__main__":
+    main()
